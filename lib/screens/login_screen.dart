@@ -167,19 +167,23 @@ class _LoginScreenState extends State<LoginScreen> {
                                 const SizedBox(height: 8),
                                 SizedBox(
                                   width: double.infinity,
-                                  child: ElevatedButton.icon(
+                                  child: OutlinedButton(
                                     onPressed: _signInWithGoogle,
-                                    icon: Image.asset(
-                                      'assets/google_logo.png',
-                                      height: 20,
-                                      width: 20,
-                                    ),
-                                    label: const Text('Sign in with Google'),
-                                    style: ElevatedButton.styleFrom(
+                                    style: OutlinedButton.styleFrom(
                                       backgroundColor: Colors.white,
                                       foregroundColor: Colors.black87,
                                       padding: const EdgeInsets.symmetric(vertical: 12),
                                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                                      side: const BorderSide(color: Colors.black12),
+                                    ),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Image.asset('assets/google_logo.png', height: 20, width: 20),
+                                        const SizedBox(width: 10),
+                                        const Text('Sign in with Google'),
+                                      ],
                                     ),
                                   ),
                                 ),
